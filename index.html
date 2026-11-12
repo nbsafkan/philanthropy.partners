@@ -1331,7 +1331,7 @@ footer a:hover{color:white}
         </div>
 
         <!-- SONUÇ -->
-        <div id="ks-result" class="ks-step">
+        <div id="ks-result" class="ks-step" style="scroll-margin-top:80px">
           <div id="ks-result-content" class="ks-result-box"></div>
           <div id="ks-action-btns" class="ks-action-btns">
             <button class="btn-primary" onclick="kesfetContact()">Bu soruyu birlikte ele alalım</button>
@@ -1481,33 +1481,13 @@ footer a:hover{color:white}
   PAGE 7 — SORULAR & İLETİŞİM
 ═══════════════════════════════ -->
 <div id="page-contact" class="page">
-  <section class="contact-hero">
-    <div class="inner">
-      <div class="sec-label">Sıklıkla Sorduğumuz Sorular</div>
-      <h1>Doğru soruyu bulmak,<br>doğru stratejiyi geliştirmek<br>kadar önemlidir.</h1>
-    </div>
-  </section>
-
-  <section style="background:white">
-    <div class="inner">
-      <div class="q-grid">
-        <div class="q-card reveal"><span class="q-open">"</span><p>Bir vakıf kurmalı mıyım?</p></div>
-        <div class="q-card reveal"><span class="q-open">"</span><p>Kaynaklarımı hangi alanlara yönlendirmeliyim?</p></div>
-        <div class="q-card reveal"><span class="q-open">"</span><p>Filantropi faaliyetlerimi daha profesyonel nasıl yönetebilirim?</p></div>
-        <div class="q-card reveal"><span class="q-open">"</span><p>Yarattığımız toplumsal etkiyi nasıl ölçebiliriz?</p></div>
-        <div class="q-card reveal"><span class="q-open">"</span><p>Vakfımızı nasıl daha stratejik yapıya dönüştürebiliriz?</p></div>
-        <div class="q-card reveal"><span class="q-open">"</span><p>Kalıcı bir toplumsal mirası nasıl inşa edebiliriz?</p></div>
-      </div>
-      <div class="q-closing reveal">Eğer sorular tanıdık geliyse, mutlaka konuşmalıyız.</div>
-    </div>
-  </section>
-
   <div class="cta-section">
     <div class="inner">
       <span class="cta-fuchsia">●</span>
       <h2>Tanışalım</h2>
       <p>Filantropi bir ürün değil, bir yolculuktur. Güven, derin düşünme ve adanmışlık üzerine inşa edilir. Eğer iyi niyetinizi kalıcı toplumsal etkiye dönüştürmeye hazırsanız, bu yolculuğu birlikte tasarlamaktan memnuniyet duyarız.</p>
       <a class="btn-primary" href="https://linkedin.com/in/nevgulsafkan" target="_blank">LinkedIn'de Bağlanalım</a>
+      <button onclick="showPage(window._prevPage||'home')" style="margin-top:16px;background:none;border:1px solid rgba(255,255,255,0.4);color:white;padding:12px 28px;border-radius:30px;cursor:pointer;font-size:14px;font-family:inherit;letter-spacing:.03em" onmouseover="this.style.borderColor='white'" onmouseout="this.style.borderColor='rgba(255,255,255,0.4)'">← Geri dön</button>
       <div class="contact-details">
         <span>Nevgül Bilsel Safkan</span>
         <span>Philanthropy Partners</span>
@@ -1525,11 +1505,19 @@ footer a:hover{color:white}
 <script>
 // ── PAGE ROUTING ──
 function showPage(id) {
+  var current = document.querySelector('.page.active');
+  if(current && current.id !== 'page-'+id) window._prevPage = current.id.replace('page-','');
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.getElementById('page-'+id).classList.add('active');
   window.scrollTo(0,0);
   updateNav(id);
   initReveal();
+  if(id === 'kesfet') {
+    document.querySelectorAll('.ks-step').forEach(s => s.classList.remove('active'));
+    document.getElementById('ks-step-0').classList.add('active');
+    document.getElementById('ks-custom-wrap').style.display = 'none';
+    document.getElementById('ks-action-btns').style.display = 'flex';
+  }
 }
 
 function updateNav(id) {
@@ -1623,11 +1611,16 @@ function kesfetResult(code) {
     '<p>'+r.desc+'</p>'+
     '<div class="ks-label">Birlikte ne geliştirebiliriz?</div>'+
     '<p>'+r.cikti+'</p>';
-  kesfetNext('result');
+  document.querySelectorAll('.ks-step').forEach(s => s.classList.remove('active'));
+  document.getElementById('ks-result').classList.add('active');
 }
 
 function kesfetContact() {
   showPage('contact');
+  setTimeout(function(){
+    var el = document.querySelector('.cta-section');
+    if(el) el.scrollIntoView({behavior:'smooth'});
+  }, 100);
 }
 </script>
 </body>
