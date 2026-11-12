@@ -219,7 +219,7 @@ nav.transparent .hamburger span{background:white}
 .inner-narrow{max-width:760px;margin:0 auto;padding:0 40px}
 
 section{padding:96px 0}
-@media(max-width:768px){section{padding:64px 0}.inner,.inner-narrow{padding:0 20px}}
+@media(max-width:768px){section{padding:64px 0}.inner,.inner-narrow{padding:0 20px}.partners-grid{grid-template-columns:1fr!important}}
 
 .sec-label{
   font-family:var(--ff-body);font-size:11px;font-weight:600;
@@ -889,39 +889,54 @@ footer a:hover{color:white}
     </div>
   </section>
 
-  <!-- NASIL -->
-  <section class="how">
+  <!-- PARTNERS -->
+  <section style="background:white;padding:80px 0">
     <div class="inner">
-      <div class="sec-label" style="color:var(--fuchsia)" >Nasıl?</div>
-      <h2 class="reveal">Her iş birliğine aynı sırayla başlarız.</h2>
-      <p class="lead reveal">Hazır çözümler sunarak işe başlamayız. Önce içtenlikle ve ilgiyle dinleriz. Kurumun bugün bulunduğu noktayı, ulaşmak istediği geleceği ve bu iki nokta arasındaki mesafeyi anlamaya odaklanırız.</p>
-      <p class="lead2 reveal">Ardından, güvenilir bir stratejik iş ortağı olarak sürece eşlik ederiz. Filantropi stratejisinin şekillendirilmesinden yönetişim yapısının güçlendirilmesine, stratejik iş birliklerinin geliştirilmesinden liderlik geçiş süreçlerinin yönetimine kadar, tek bir proje ya da fonlama döneminin ötesine geçen kalıcı etkiyi mümkün kılacak altyapının oluşturulmasına destek oluruz.</p>
-      <p class="lead2 reveal" style="margin-top:12px">Müşterilerimin değerlerini, kaynaklarını ve etki gücünü; anlamlı, ölçülebilir ve sürdürülebilir toplumsal faydaya dönüştürmelerine yardımcı oluruz.</p>
-      <div class="steps">
-        <div class="step reveal">
-          <div class="step-num">01</div>
-          <div class="step-content">
-            <h3>Dinle</h3>
-            <p>Her şeyden önce dinleriz. — Müşterilerimizin değerlerini, hedeflerini, etrafındaki paydaşları ve katkı sunmak istediği ekosistemi derinlemesine dinleriz. Kök nedenlere odaklanırız, belirtilere değil.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start" class="partners-grid">
+        <div>
+          <div class="sec-label reveal">PARTNERS</div>
+          <h2 class="reveal" style="font-size:clamp(28px,4vw,44px);line-height:1.2;margin:16px 0 24px">Doğru soruya, doğru uzmanlıklarla birlikte yaklaşıyoruz.</h2>
+          <p class="reveal" style="color:var(--gray-mid);line-height:1.8;font-size:16px">Philanthropy Partners kurumsal yönetim kurullarında, vakıf liderliğinde ve uluslararası filantropi ağlarında çeşitli roller üstlenen uzman kişileri kurumlarla bir araya getirir.</p>
+          <p class="reveal" style="color:var(--gray-mid);line-height:1.8;font-size:16px;margin-top:16px">Philanthropy Partners'ın gücü, farklı deneyim ve uzmanlıkların bir araya gelmesinden geliyor.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <!-- Kart 1 -->
+          <div class="reveal" style="background:#f5f6f8;border:1px solid #e0e3e8;border-radius:8px;padding:32px 20px;text-align:center">
+            <svg width="80" height="90" viewBox="0 0 80 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="32" r="28" stroke="#ccc" stroke-width="1" stroke-dasharray="4 3" fill="none"/>
+              <path d="M40 10 A22 22 0 0 1 62 32" stroke="#e05555" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+              <circle cx="40" cy="32" r="12" fill="#2563EB"/>
+              <path d="M18 72 Q40 52 62 72" fill="#2563EB"/>
+            </svg>
+          </div>
+          <!-- Kart 2 -->
+          <div class="reveal" style="background:#f5f6f8;border:1px solid #e0e3e8;border-radius:8px;padding:32px 20px;text-align:center">
+            <svg width="80" height="90" viewBox="0 0 80 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="32" r="28" stroke="#ccc" stroke-width="1" stroke-dasharray="4 3" fill="none"/>
+              <path d="M40 10 A22 22 0 0 1 62 32" stroke="#e05555" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+              <circle cx="40" cy="32" r="12" fill="#3B82C4"/>
+              <path d="M18 72 Q40 52 62 72" fill="#3B82C4"/>
+            </svg>
+          </div>
+          <!-- Kart 3 -->
+          <div class="reveal" style="background:#f5f6f8;border:1px solid #e0e3e8;border-radius:8px;padding:32px 20px;text-align:center">
+            <svg width="80" height="90" viewBox="0 0 80 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="32" r="28" stroke="#ccc" stroke-width="1" stroke-dasharray="4 3" fill="none"/>
+              <path d="M40 10 A22 22 0 0 1 62 32" stroke="#e05555" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+              <circle cx="40" cy="32" r="12" fill="#7CA5C0"/>
+              <path d="M18 72 Q40 52 62 72" fill="#7CA5C0"/>
+            </svg>
+          </div>
+          <!-- Kart 4 -->
+          <div class="reveal" style="background:#f5f6f8;border:1px solid #e0e3e8;border-radius:8px;padding:32px 20px;text-align:center">
+            <svg width="80" height="90" viewBox="0 0 80 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="32" r="28" stroke="#ccc" stroke-width="1" stroke-dasharray="4 3" fill="none"/>
+              <path d="M40 10 A22 22 0 0 1 62 32" stroke="#e05555" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+              <circle cx="40" cy="32" r="12" fill="#1F3864"/>
+              <path d="M18 72 Q40 52 62 72" fill="#1F3864"/>
+            </svg>
           </div>
         </div>
-        <div class="step reveal">
-          <div class="step-num">02</div>
-          <div class="step-content">
-            <h3>Tasarla</h3>
-            <p>Öncelikleri müşterilerimizle birlikte netleştiririz, stratejik yönü belirleriz ve toplumsal etkiyi geleceğe taşıyacak iş birliklerini, yapıları ve programları inşa ederiz.</p>
-          </div>
-        </div>
-        <div class="step reveal">
-          <div class="step-num">03</div>
-          <div class="step-content">
-            <h3>Hayata Geçir ve Geliştir</h3>
-            <p>Gerçek etki, stratejinin uygulamayla buluştuğu noktada ortaya çıkar. Bu nedenle bizim için danışmanlık, strateji belgesinin teslim edilmesiyle sona ermez. Uygulama, iş birliklerinin kurulması, değişimin yönetimi ve sürekli öğrenme süreçlerinde de müşterilerimizin yanında olur, gerektiğinde birlikte uygular, birlikte geliştiririz.</p>
-          </div>
-        </div>
-      </div>
-      <div class="step-outcome reveal">
-        <p>Çünkü bizim için Filantropi'de başarı, teslim edilen bir strateji değil; hayata geçmiş ve ölçülebilir etki yaratan bir dönüşümdür.</p>
       </div>
     </div>
   </section>
