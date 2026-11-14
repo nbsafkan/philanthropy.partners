@@ -1,0 +1,12 @@
+PHILANTHROPY PARTNERS - NEVGUL ICIN SITE ONIZLEMESI
+
+1. Bu ZIP dosyasini bilgisayarina indir.
+2. ZIP ustune sag tiklayip "Tumunu ayikla" sec.
+3. Acilan klasorde index.html dosyasina cift tikla. Chrome/Edge ile WEB SITESI gibi acilir.
+4. Ingilizce icin EN sayfasina gec veya en.html dosyasini ac.
+5. Sadece tasarimi incelemek icin ONIZLEME_*.png resimlerine bakabilirsin.
+
+NOT: ChatGPT icindeki "Ac" butonu HTML kaynak kodunu gosterebilir. Bu kodda sorun oldugu anlamina gelmez.
+Yalnizca indirip bilgisayarda Chrome/Edge ile ac.
+
+Bu taslak GitHub'daki canli siteyi degistirmez.
